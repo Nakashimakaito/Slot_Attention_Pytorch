@@ -1,0 +1,33 @@
+# @package _global_
+model:
+  resolution: [128, 128]
+  hid_dim: 64
+  model_dir: './tmp/model10.ckpt'
+  
+slot:
+  num_iterations: 3
+  num_slots: 7
+  
+dataset:
+  clevr: True
+  my_path: "/DB/PointCloud/UoA/rtf_lobby_front_camera/"
+  clevr_path:  "/USERS/s1270120/CLEVR_v1.0/images/"
+  train_rate: 0.7
+  test_rate: 0.15
+  batch_size: 16
+  num_workers: 4
+  
+param:
+  num_epochs: 100
+  decay_steps: 100000
+  decay_rate: 0.5
+  warmup_steps: 10000
+  
+optim:
+  learning_rate: 0.0004
+  
+tensorboard:
+  img_path: 'runs2/img/img_slot'
+  logs_path: 'runs2/logs'
+
+  
